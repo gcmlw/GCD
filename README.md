@@ -1,7 +1,7 @@
 # GCD
 Getting and Cleaning Data
 
-##Assignment
+## Assignment
 1) Merges the training and the test sets to create one data set.
 2) Extracts only the measurements on the mean and standard deviation for each measurement.
 3) Uses descriptive activity names to name the activities in the data set
@@ -12,7 +12,7 @@ Finally, write data out using write.table() using row.name=FALSE
 
 ## Abt run_analysis.R
 
-** Data Source **
+**Data Source**
 - data2/activity_labels.txt (activity label)
 - data2/test/subject_test.txt (subject)
 - data2/train/subject_train.txt (subject)
@@ -22,7 +22,7 @@ Finally, write data out using write.table() using row.name=FALSE
 - data2/train/X_train.txt (readings)
 - data2/features.txt (readings label)
 
-** General Steps to Process Data **
+**General Steps to Process Data**
 1) Parse the data files
 2) A function to map activity number to activity name 'mapActivity'
 3) Map the Y data containing activity numbers to obtain corresponding activity names
@@ -34,10 +34,10 @@ Finally, write data out using write.table() using row.name=FALSE
 9) Using 'dplyr', group the 'subdata' by 'subject' and 'activity', and 'summarise' with the mean of the measurements columns ('subdata2')
 10) Write 'subdata2' out to './data2/groupby.txt' with 'row.names = FALSE'
 
-** Output **
+**Output**
 groupby.txt
 
-** Codebook Commands **
+**Codebook Commands**
 'library(codebook)'
 'new_codebook_rmd()'
 'codebook_data <- rio::import("./data2/groupby.csv")'
@@ -47,7 +47,7 @@ groupby.txt
 
 The dataset has N=180 rows and 68 columns.180 rows have no missing values on any column.
 
-** Table of variables **
+**Table of variables**
 This table contains variable names, labels, and number of missing values.
 See the complete codebook for more.
 |name                        |label | n_missing|
@@ -121,6 +121,6 @@ See the complete codebook for more.
 |fBodyBodyGyroMag-std()      |NA    |         0|
 |fBodyBodyGyroJerkMag-std()  |NA    |         0|
 
-* Note
-This dataset was automatically described using the [codebook R package](https://rubenarslan.github.io/codebook/) (version 0.8.2). *
+*Note
+This dataset was automatically described using the [codebook R package](https://rubenarslan.github.io/codebook/) (version 0.8.2).*
   
