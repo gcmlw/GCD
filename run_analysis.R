@@ -62,5 +62,5 @@ subdata <- alldata[,fcollist]
 shortcollist <- collist[fcollist3]
 subdata2 <- subdata %>% group_by(subdata$subject,subdata$activity) %>% summarise_at(shortcollist, mean, na.rm=TRUE)
 
-write.table(subdata2, "./data/measurements.txt", row.names = FALSE)
-write.table(subdata2, "./data/groupby.txt", row.names = FALSE)
+write.table(subdata2, "./data2/measurements.txt", row.names = FALSE)
+write.table(subdata2, "./data2/groupby.txt", row.names = FALSE)
