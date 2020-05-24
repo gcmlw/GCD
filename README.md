@@ -3,6 +3,7 @@ Getting and Cleaning Data
 
 Abt run_analysis.R
 
+<script type="application/ld+json">
 {
   "name": "codebook_data",
   "datePublished": "2020-05-24",
@@ -284,4 +285,5 @@ Abt run_analysis.R
       "@type": "propertyValue"
     }
   ]
-}`
+}
+</script>
